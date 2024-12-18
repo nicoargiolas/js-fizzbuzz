@@ -13,15 +13,30 @@
 // sia del codice come performance, ma anche, se non soprattutto come leggibilità e mantenibilità.
 
 // Inizio del ciclo
+for (let i=1; i<=100; i++) {
 
-// Riconoscimento dei numeri multipli di 3 o di 5
+    // Riconoscimento dei numeri multipli di 3 o di 5
+    if ((i%3===0) || (i%5===0)) {
 
-    // Riconoscimento dei numeri multipli di 3
-    // In questo caso stamperemo Fizz
+        // Riconoscimento dei numeri multipli sia di 3 che di 5
+        if ((i%3===0) && (i%5===0)){
+            // In questo caso stamperemo FizzBuzz
+            console.log("FizzBuzz");
 
-    // Riconoscimento dei numeri multipli di 5
-    // In questo caso stamperemo Buzz
+        // Riconoscimento multipli di 3
+        } else if (i%3===0) {
+            // In questo caso stamperemo Fizz
+            console.log("Fizz");
 
-    // Se i numeri saranno multipli sia di 3 che di 5 stamperemo FizzBuzz
+        // Riconoscimento multipli di 5
+        } else {
+            // In questo caso stamperemo Buzz
+            console.log("Buzz");
+        }
 
-// Altrimenti stamperemo il numero
+    // Altrimenti stamperemo il numero
+    } else {
+        console.log(i);
+    }
+}
+
