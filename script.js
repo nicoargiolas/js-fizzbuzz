@@ -12,6 +12,9 @@
 // ragioniamo  sul possibile refactoring, quindi ottimizzazione possibile,
 // sia del codice come performance, ma anche, se non soprattutto come leggibilità e mantenibilità.
 
+
+// ______________ SVOLGIMENTO 1 _________________
+
 // Inizio del ciclo
 for (let i=1; i<=100; i++) {
 
@@ -38,5 +41,32 @@ for (let i=1; i<=100; i++) {
     } else {
         console.log(i);
     }
+}
+
+
+// ______________ SVOLGIMENTO 2 _______________
+// Dichiarazione variabile risultato
+let risultato;
+
+
+// Inizio del ciclo
+for (let i=1; i<=100; i++) {
+    risultato = ""
+
+    if ((i%3!==0) && (i%5!==0)) {
+
+        risultato = `${i}`;
+
+    } else {
+        if (i%3===0) {
+            risultato = "Fizz";
+        }
+
+        if (i%5===0) {
+            risultato = risultato + "Buzz";
+        }
+    }
+
+    console.log(risultato);
 }
 
